@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Breast Cancer Prediction</title>
+    <style>
+        .feature-container {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 300px;
+        }
+
+        .feature-name {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Breast Cancer Prediction</h2>
+    <form method="POST" action="/predict">
+        <div class="feature-container">
+            <label>Feature 1 (Mean Radius):</label>
+            <input type="text" name="f0" required>
+            <span class="feature-name"></span>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 2 (Mean Texture):</label>
+            <input type="text" name="f1" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 3 (Mean Perimeter):</label>
+            <input type="text" name="f2" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 4 (Mean Area):</label>
+            <input type="text" name="f3" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 5 (Mean Smoothness):</label>
+            <input type="text" name="f4" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 6 (Mean Compactness):</label>
+            <input type="text" name="f5" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 7 (Mean Concavity):</label>
+            <input type="text" name="f6" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 8 (Mean Concave Points):</label>
+            <input type="text" name="f7" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 9 (Mean Symmetry):</label>
+            <input type="text" name="f8" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 10 (Mean Fractal Dimension):</label>
+            <input type="text" name="f9" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 11 (Radius Error):</label>
+            <input type="text" name="f10" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 12 (Texture Error):</label>
+            <input type="text" name="f11" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 13 (Perimeter Error):</label>
+            <input type="text" name="f12" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 14 (Area Error):</label>
+            <input type="text" name="f13" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 15 (Smoothness Error):</label>
+            <input type="text" name="f14" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 16 (Compactness Error):</label>
+            <input type="text" name="f15" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 17 (Concavity Error):</label>
+            <input type="text" name="f16" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 18 (Concave Points Error):</label>
+            <input type="text" name="f17" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 19 (Symmetry Error):</label>
+            <input type="text" name="f18" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 20 (Fractal Dimension Error):</label>
+            <input type="text" name="f19" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 21 (Worst Radius):</label>
+            <input type="text" name="f20" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 22 (Worst Texture):</label>
+            <input type="text" name="f21" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 23 (Worst Perimeter):</label>
+            <input type="text" name="f22" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 24 (Worst Area):</label>
+            <input type="text" name="f23" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 25 (Worst Smoothness):</label>
+            <input type="text" name="f24" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 26 (Worst Compactness):</label>
+            <input type="text" name="f25" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 27 (Worst Concavity):</label>
+            <input type="text" name="f26" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 28 (Worst Concave Points):</label>
+            <input type="text" name="f27" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 29 (Worst Symmetry):</label>
+            <input type="text" name="f28" required>
+        </div>
+
+        <div class="feature-container">
+            <label>Feature 30 (Worst Fractal Dimension):</label>
+            <input type="text" name="f29" required>
+        </div>
+
+        <input type="submit" value="Predict" style="margin-top: 20px; padding: 10px 20px;">
+    </form>
+    <h3>{{ prediction_text }}</h3>
+</body>
+
+</html>
